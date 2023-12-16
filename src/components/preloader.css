@@ -1,0 +1,88 @@
+.preloader {
+    height: 100vh;
+    width: 100%;
+    background: black url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><radialGradient id="a12" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)"><stop offset="0" stop-color="%2313FDFF"></stop><stop offset=".3" stop-color="%2313FDFF" stop-opacity=".9"></stop><stop offset=".6" stop-color="%2313FDFF" stop-opacity=".6"></stop><stop offset=".8" stop-color="%2313FDFF" stop-opacity=".3"></stop><stop offset="1" stop-color="%2313FDFF" stop-opacity="0"></stop></radialGradient><circle transform-origin="center" fill="none" stroke="url(%23a12)" stroke-width="3" stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="2" values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></circle><circle transform-origin="center" fill="none" opacity=".2" stroke="%2313FDFF" stroke-width="3" stroke-linecap="round" cx="100" cy="100" r="70"></circle></svg>') no-repeat center/cover;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.preloader h1 {
+    font-size: 5rem;
+    color: white;
+}
+
+.preloader .text-container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 1000px;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+}
+
+.text-container span {
+
+    animation-name: preloader;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+
+
+
+
+
+
+
+
+@keyframes preloader {
+    0% {
+        margin-top: 0px;
+
+    }
+
+    50% {
+        margin-top: -10px;
+        transform: rotateX(360deg)
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (width < 300px) {
+    .preloader h1 {
+        font-size: 1.5rem;
+        color: white;
+    }
+}
+@media screen and (width > 550px) and (width<1100px) {
+    .preloader h1 {
+        font-size: 2.7rem;
+        color: white;
+    }
+}
+@media screen and (max-width:550px) {
+    .preloader .text-container {
+        font-size: 2rem;
+    }
+    .preloader h1 {
+        font-size: 2.5rem;
+        color: white;
+    }
+}
